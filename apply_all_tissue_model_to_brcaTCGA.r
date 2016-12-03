@@ -213,14 +213,14 @@ vector4=Reduce(intersect, list(a,b,c,d,e,f,g,h))
 write.csv(vector4,"vector4.csv")
 
 
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##z
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##z
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##z
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##z
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##z
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##z
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##z
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##z
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##aa
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##bb
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##cc
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##dd
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##ee
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##ff
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##gg
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##hh
 a=colnames()
 b=colnames()
 c=colnames()
@@ -229,17 +229,52 @@ e=colnames()
 f=colnames()
 g=colnames()
 h=colnames()
+vector5=Reduce(intersect, list(a,b,c,d,e,f,g,h))
+write.csv(vector5,"vector5.csv")
 
 
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##ii
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##jj
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##kk
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##ll
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##mm
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##nn
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##oo
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##pp
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##qq
+Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##rr
+a=colnames()
+b=colnames()
+c=colnames()
+d=colnames()
+e=colnames()
+f=colnames()
+g=colnames()
+h=colnames()
+i=colnames()
+j=colnames()
+vector6=Reduce(intersect, list(a,b,c,d,e,f,g,h))
+write.csv(vector6,"vector6.csv")
 
-vector3=Reduce(intersect, list(i,j,k,l,m))
-vector4=Reduce(intersect, list(n,o,p,q))
-vector5=Reduce(intersect, list(r,s,t,u))
-vector6=Reduce(intersect, list(v,w,x,y))
-vector7=Reduce(intersect, list(z,aa,bb,cc))
-vector8=Reduce(intersect, list(dd,ee,ff,gg))
 
-vector=Reduce(intersect, list(vector1,vector2,vector3,))
+vector1=read.csv("vector1.csv")
+vector2=read.csv("vector2.csv")
+vector3=read.csv("vector3.csv")
+vector4=read.csv("vector4.csv")
+vector5=read.csv("vector5.csv")
+vector6=read.csv("vector6.csv")
 
+vector=Reduce(intersect, list(vector1[,2],vector2[,2],vector3[,2],vector4[,2],vector5[,2],vector6[,2]))
+
+breast=read.csv("breastPatient_brest model.csv",header=T)  ##a
 breast_table=rbind(vector,subset(breast, select = vector))
+
+lung=read.csv("breastPatient_lung model.csv", header=T)    ##b
 lung_table=rbind(vector,subset(lung, select = vector))
+
+gastro=read.csv("breastPatient_Gastro model.csv", header=T)  ##c
+gastro_table=rbind(vector,subset(gastro, select = vector))
+
+Adipose=read.csv("breastPatient_Adipose model.csv", header=T)  ##d
+
+
