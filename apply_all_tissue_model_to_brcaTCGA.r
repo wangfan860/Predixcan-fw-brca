@@ -9,12 +9,17 @@ write.csv(breast_Table,"breastPatient_brest model.csv")
 lung_model_all=read.table("tcga_3615_lung_gtex_1kg_modelpredicted_expression.txt",header=T)   ####b
 rownames(lung_model_all)=lung_model_all[,2]
 lung_Table=merge(brca_patient, lung_model_all, by="row.names")
-write.csv(breast_Table,"breastPatient_lung model.csv")
+write.csv(lung_Table,"breastPatient_lung model.csv")
 
 Gastro_model_all=read.table("Esophagus_Gastroesophageal_Junction-predicted_expression.txt",header=T)    ####c
 rownames(Gastro_model_all)=Gastro_model_all[,2]
 Gastro_Table=merge(brca_patient, Gastro_model_all, by="row.names")
-write.csv(breast_Table,"breastPatient_Gastro model.csv")
+write.csv(Gastro_Table,"breastPatient_Gastro model.csv")
+
+Adipose_model_all=read.table("Adipose_Subcutaneous-predicted_expression.txt",header=T)    ####d
+rownames(Adipose_model_all)=Adipose_model_all[,2]
+Adipose_Table=merge(brca_patient, Adiposeo_model_all, by="row.names")
+write.csv(Adipose_Table,"breastPatient_Adipose model.csv")
 
 
 breast=read.table("breastPatient_brest model.txt",header=T)
