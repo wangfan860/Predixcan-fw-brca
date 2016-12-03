@@ -26,6 +26,25 @@ rownames(Brain_Cortex_model_all)=Brain_Cortex_model_all[,2]
 Brain_Cortex_Table=merge(brca_patient, Brain_Cortex_model_all, by="row.names")
 write.csv(Brain_Cortex_Table,"breastPatient_Brain_Cortex model.csv")
 
+Pituitary_model_all=read.table("Pituitary-predicted_expression.txt",header=T)    ####f
+rownames(Pituitary_model_all)=Pituitary_model_all[,2]
+Pituitary_Table=merge(brca_patient, Pituitary_model_all, by="row.names")
+write.csv(Pituitary_Table,"breastPatient_Pituitary model.csv")
+
+Mucosa_model_all=read.table("Esophagus_Mucosa-predicted_expression.txt",header=T)    ####g
+rownames(Mucosa_model_all)=Mucosa_model_all[,2]
+Mucosa_Table=merge(brca_patient, Mucosa_model_all, by="row.names")
+write.csv(Mucosa_Table,"breastPatient_Esophagus_Mucosa model.csv")
+
+Brain_Frontal_model_all=read.table("Brain_Frontal_Cortex_BA9-predicted_expression.txt",header=T)    ####h
+rownames(Brain_Frontal_model_all)=Brain_Frontal_model_all[,2]
+Brain_Frontal_Table=merge(brca_patient, Brain_Frontal_model_all, by="row.names")
+write.csv(Brain_Frontal_Table,"breastPatient_Brain_Frontal_Cortex_BA9-model.csv")
+
+
+
+
+
 
 
 
