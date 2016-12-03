@@ -46,13 +46,24 @@ rownames(Adipose_Visceral_model_all)=Adipose_Visceral_model_all[,2]
 Adipose_Visceral_Table=merge(brca_patient, Adipose_Visceral_model_all, by="row.names")
 write.csv(Adipose_Visceral_Table,"breastPatient_Adipose_Visceral_Omentum-model.csv")
 
+Prostate_model_all=read.table("Prostate-predicted_expression.txt",header=T)    ####j
+rownames(Prostate_model_all)=Prostate_model_all[,2]
+Prostate_Table=merge(brca_patient, Prostate_model_all, by="row.names")
+write.csv(Prostate_Table,"breastPatient_Prostate-model.csv")
 
 
 
 
 
-breast=read.table("breastPatient_brest model.txt",header=T)
-lung=read.table("tcga_3615_lung_gtex_model_predicted_expression.txt", header=T)
+breast=read.csv("breastPatient_brest model.csv",header=T)  ##a
+lung=read.csv("breastPatient_lung model.csv", header=T)    ##b
+gastro=read.csv("breastPatient_Gastro model.csv", header=T)  ##c
+Adipose=read.csv("breastPatient_Adipose model.csv", header=T)  ##d
+Brain_Cortex=read.csv("breastPatient_Brain_Cortex model.csv", header=T)  ##e
+Pituitary=read.csv("breastPatient_Pituitary model.csv", header=T)  ##f
+Mucosa=read.csv("breastPatient_Esophagus_Mucosa model.csv", header=T)  #g
+Brain_Frontal=read.csv("breastPatient_Brain_Frontal_Cortex_BA9-model.csv", header=T) ##h
+Brain_Frontal=read.csv("v.csv", header=T) ##i
 
 
 a=colnames(breast)
