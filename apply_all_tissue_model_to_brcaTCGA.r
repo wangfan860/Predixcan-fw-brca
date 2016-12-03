@@ -105,6 +105,24 @@ vector2=Reduce(intersect, list(a,b,c,d,e,f))
 write.csv(vector2,"vector2.csv")
 
 
+Brain_Hippocampus=read.csv("breastPatient_Brain_Hippocampus-model.csv", header=T) ##k
+Muscularis=read.csv("breastPatient_Esophagus_Muscularis-model.csv", header=T) ##l
+Adrenal_Gland=read.csv("breastPatient_Adrenal_Gland-model.csv", header=T) ##m
+Skin_Not_Sun=read.csv("breastPatient_Skin_Not_Sun_Exposed_Suprapubic-model.csv", header=T) ##n
+prostate=read.csv("breastPatient_Prostate-model.csv", header=T) ##o
+prostate=read.csv("breastPatient_Prostate-model.csv", header=T) ##p
+a=colnames(Brain_Hippocampus)
+b=colnames(Muscularis)
+c=colnames(Adrenal_Gland)
+d=colnames(Skin_Not_Sun)
+e=colnames(Adipose_Visceral)
+f=colnames(prostate)
+vector3=Reduce(intersect, list(a,b,c,d,e,f))
+write.csv(vector3,"vector3.csv")
+
+
+
+
 vector3=Reduce(intersect, list(i,j,k,l,m))
 vector4=Reduce(intersect, list(n,o,p,q))
 vector5=Reduce(intersect, list(r,s,t,u))
