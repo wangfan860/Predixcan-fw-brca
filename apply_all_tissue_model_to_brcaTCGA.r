@@ -51,7 +51,30 @@ rownames(Prostate_model_all)=Prostate_model_all[,2]
 Prostate_Table=merge(brca_patient, Prostate_model_all, by="row.names")
 write.csv(Prostate_Table,"breastPatient_Prostate-model.csv")
 
+Brain_Hippocampus_model_all=read.table("Brain_Hippocampus-predicted_expression.txt",header=T)    ####k
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Brain_Hippocampus-model.csv")
 
+Brain_Hippocampus_model_all=read.table("Brain_Hippocampus-predicted_expression.txt",header=T)    ####k
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Brain_Hippocampus-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Esophagus_Muscularis-predicted_expression.txt",header=T)    ####l
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Esophagus_Muscularis-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Adrenal_Gland-predicted_expression.txt",header=T)    ####m
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Adrenal_Gland-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Skin_Not_Sun_Exposed_Suprapubic-predicted_expression.txt",header=T)    ####n
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Skin_Not_Sun_Exposed_Suprapubic-model.csv")
 
 
 
@@ -59,20 +82,37 @@ breast=read.csv("breastPatient_brest model.csv",header=T)  ##a
 lung=read.csv("breastPatient_lung model.csv", header=T)    ##b
 gastro=read.csv("breastPatient_Gastro model.csv", header=T)  ##c
 Adipose=read.csv("breastPatient_Adipose model.csv", header=T)  ##d
+a=colnames(breast)
+b=colnames(lung)
+c=colnames(gastro)
+d=colnames(Adipose)
+vector1=Reduce(intersect, list(a,b,c,d))
+write.csv(vector1,"vector1.csv")
+
 Brain_Cortex=read.csv("breastPatient_Brain_Cortex model.csv", header=T)  ##e
 Pituitary=read.csv("breastPatient_Pituitary model.csv", header=T)  ##f
 Mucosa=read.csv("breastPatient_Esophagus_Mucosa model.csv", header=T)  #g
 Brain_Frontal=read.csv("breastPatient_Brain_Frontal_Cortex_BA9-model.csv", header=T) ##h
 Adipose_Visceral=read.csv("breastPatient_Adipose_Visceral_Omentum-model.csv", header=T) ##i
 prostate=read.csv("breastPatient_Prostate-model.csv", header=T) ##j
+a=colnames(Brain_Cortex)
+b=colnames(Pituitary)
+c=colnames(Mucosa)
+d=colnames(Brain_Frontal)
+e=colnames(Adipose_Visceral)
+f=colnames(prostate)
+vector2=Reduce(intersect, list(a,b,c,d,e,f))
+write.csv(vector2,"vector2.csv")
 
 
-a=colnames(breast)
-b=colnames(lung)
-c=colnames(gastro)
+vector3=Reduce(intersect, list(i,j,k,l,m))
+vector4=Reduce(intersect, list(n,o,p,q))
+vector5=Reduce(intersect, list(r,s,t,u))
+vector6=Reduce(intersect, list(v,w,x,y))
+vector7=Reduce(intersect, list(z,aa,bb,cc))
+vector8=Reduce(intersect, list(dd,ee,ff,gg))
 
-
-vector=Reduce(intersect, list(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,aa,bb,cc,dd,ee,ff,gg))
+vector=Reduce(intersect, list(vector1,vector2,vector3,))
 
 breast_table=rbind(vector,subset(breast, select = vector))
 lung_table=rbind(vector,subset(lung, select = vector))
