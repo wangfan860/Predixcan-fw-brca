@@ -63,11 +63,14 @@ Brain_Cortex=read.csv("breastPatient_Brain_Cortex model.csv", header=T)  ##e
 Pituitary=read.csv("breastPatient_Pituitary model.csv", header=T)  ##f
 Mucosa=read.csv("breastPatient_Esophagus_Mucosa model.csv", header=T)  #g
 Brain_Frontal=read.csv("breastPatient_Brain_Frontal_Cortex_BA9-model.csv", header=T) ##h
-Brain_Frontal=read.csv("v.csv", header=T) ##i
+Adipose_Visceral=read.csv("breastPatient_Adipose_Visceral_Omentum-model.csv", header=T) ##i
+prostate=read.csv("breastPatient_Prostate-model.csv", header=T) ##j
 
 
 a=colnames(breast)
 b=colnames(lung)
+c=colnames(gastro)
+
 
 vector=Reduce(intersect, list(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,aa,bb,cc,dd,ee,ff,gg))
 
