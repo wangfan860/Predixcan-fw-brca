@@ -18,8 +18,15 @@ write.csv(Gastro_Table,"breastPatient_Gastro model.csv")
 
 Adipose_model_all=read.table("Adipose_Subcutaneous-predicted_expression.txt",header=T)    ####d
 rownames(Adipose_model_all)=Adipose_model_all[,2]
-Adipose_Table=merge(brca_patient, Adiposeo_model_all, by="row.names")
+Adipose_Table=merge(brca_patient, Adipose_model_all, by="row.names")
 write.csv(Adipose_Table,"breastPatient_Adipose model.csv")
+
+Brain_Cortex_model_all=read.table("Brain_Cortex-predicted_expression.txt",header=T)    ####e
+rownames(Brain_Cortex_model_all)=Brain_Cortex_model_all[,2]
+Brain_Cortex_Table=merge(brca_patient, Brain_Cortex_model_all, by="row.names")
+write.csv(Brain_Cortex_Table,"breastPatient_Brain_Cortex model.csv")
+
+
 
 
 breast=read.table("breastPatient_brest model.txt",header=T)
