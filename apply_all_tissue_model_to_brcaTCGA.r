@@ -41,7 +41,10 @@ rownames(Brain_Frontal_model_all)=Brain_Frontal_model_all[,2]
 Brain_Frontal_Table=merge(brca_patient, Brain_Frontal_model_all, by="row.names")
 write.csv(Brain_Frontal_Table,"breastPatient_Brain_Frontal_Cortex_BA9-model.csv")
 
-
+Adipose_Visceral_model_all=read.table("Adipose_Visceral_Omentum-predicted_expression.txt",header=T)    ####i
+rownames(Adipose_Visceral_model_all)=Adipose_Visceral_model_all[,2]
+Adipose_Visceral_Table=merge(brca_patient, Adipose_Visceral_model_all, by="row.names")
+write.csv(Adipose_Visceral_Table,"breastPatient_Adipose_Visceral_Omentum-model.csv")
 
 
 
