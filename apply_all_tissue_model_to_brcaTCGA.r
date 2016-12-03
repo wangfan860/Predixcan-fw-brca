@@ -96,8 +96,55 @@ rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
 Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
 write.csv(Brain_Hippocampus_Table,"breastPatient_Skin_Sun_Exposed_Lower_leg-model.csv")
 
+Brain_Hippocampus_model_all=read.table("Brain_Nucleus_accumbens_basal_ganglia-predicted_expression.txt",header=T)    ####s
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Brain_Nucleus_accumbens_basal_ganglia-model.csv")
 
+Brain_Hippocampus_model_all=read.table("Small_Intestine_Terminal_Ileum-predicted_expression.txt",header=T)    ####t
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Small_Intestine_Terminal_Ileum-model.csv")
 
+Brain_Hippocampus_model_all=read.table("Heart_Left_Ventricle-predicted_expression.txt",header=T)    ####u
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Heart_Left_Ventricle-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Artery_Coronary-predicted_expression.txt",header=T)    ####v
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Artery_Coronary-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Artery_Coronary-predicted_expression.txt",header=T)    ####w
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Artery_Coronary-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Artery_Coronary-predicted_expression.txt",header=T)    ####x
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Artery_Coronary-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Artery_Coronary-predicted_expression.txt",header=T)    ####y
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Artery_Coronary-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Artery_Coronary-predicted_expression.txt",header=T)    ####z
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Artery_Coronary-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Artery_Coronary-predicted_expression.txt",header=T)    ####aa
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Artery_Coronary-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Artery_Coronary-predicted_expression.txt",header=T)    ####bb
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Artery_Coronary-model.csv")
 
 breast=read.csv("breastPatient_brest model.csv",header=T)  ##a
 lung=read.csv("breastPatient_lung model.csv", header=T)    ##b
@@ -146,7 +193,24 @@ vector3=Reduce(intersect, list(a,b,c,d,e,f,g,h))
 write.csv(vector3,"vector3.csv")
 
 
-
+Brain_Nucleus=read.csv("breastPatient_Brain_Nucleus_accumbens_basal_ganglia-model.csv", header=T) ##s
+Small_Intestine=read.csv("breastPatient_Small_Intestine_Terminal_Ileum-model.csv", header=T) ##t
+Heart_Left_Ventricle=read.csv("breastPatient_Heart_Left_Ventricle-model.csv", header=T) ##u
+Artery_Coronary=read.csv("breastPatient_Artery_Coronary-model.csv", header=T) ##v
+Skin_Sun_Exposed=read.csv("breastPatient_Skin_Sun_Exposed_Lower_leg-model.csv", header=T) ##w
+Skin_Sun_Exposed=read.csv("breastPatient_Skin_Sun_Exposed_Lower_leg-model.csv", header=T) ##x
+Skin_Sun_Exposed=read.csv("breastPatient_Skin_Sun_Exposed_Lower_leg-model.csv", header=T) ##y
+Skin_Sun_Exposed=read.csv("breastPatient_Skin_Sun_Exposed_Lower_leg-model.csv", header=T) ##z
+a=colnames(Brain_Nucleus)
+b=colnames(Small_Intestine)
+c=colnames(Heart_Left_Ventricle)
+d=colnames(Artery_Coronary)
+e=colnames()
+f=colnames()
+g=colnames()
+h=colnames()
+vector4=Reduce(intersect, list(a,b,c,d,e,f,g,h))
+write.csv(vector4,"vector4.csv")
 
 vector3=Reduce(intersect, list(i,j,k,l,m))
 vector4=Reduce(intersect, list(n,o,p,q))
