@@ -76,6 +76,27 @@ rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
 Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
 write.csv(Brain_Hippocampus_Table,"breastPatient_Skin_Not_Sun_Exposed_Suprapubic-model.csv")
 
+Brain_Hippocampus_model_all=read.table("Brain_Hypothalamus-predicted_expression.txt",header=T)    ####o
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Brain_Hypothalamus-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Artery_Aorta-predicted_expression.txt",header=T)    ####p
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Artery_Aorta-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Heart_Atrial_Appendage-predicted_expression.txt",header=T)    ####q
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Heart_Atrial_Appendage-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Skin_Sun_Exposed_Lower_leg-predicted_expression.txt",header=T)    ####r
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Skin_Sun_Exposed_Lower_leg-model.csv")
+
+
 
 
 breast=read.csv("breastPatient_brest model.csv",header=T)  ##a
@@ -109,15 +130,19 @@ Brain_Hippocampus=read.csv("breastPatient_Brain_Hippocampus-model.csv", header=T
 Muscularis=read.csv("breastPatient_Esophagus_Muscularis-model.csv", header=T) ##l
 Adrenal_Gland=read.csv("breastPatient_Adrenal_Gland-model.csv", header=T) ##m
 Skin_Not_Sun=read.csv("breastPatient_Skin_Not_Sun_Exposed_Suprapubic-model.csv", header=T) ##n
-prostate=read.csv("breastPatient_Prostate-model.csv", header=T) ##o
-prostate=read.csv("breastPatient_Prostate-model.csv", header=T) ##p
+Brain_Hypothalamus=read.csv("breastPatient_Brain_Hypothalamus-model.csv", header=T) ##o
+Artery_Aorta=read.csv("breastPatient_Artery_Aorta-model.csv", header=T) ##p
+Heart_Atrial=read.csv("breastPatient_Heart_Atrial_Appendage-model.csv", header=T) ##q
+Skin_Sun_Exposed=read.csv("breastPatient_Skin_Sun_Exposed_Lower_leg-model.csv", header=T) ##r
 a=colnames(Brain_Hippocampus)
 b=colnames(Muscularis)
 c=colnames(Adrenal_Gland)
 d=colnames(Skin_Not_Sun)
-e=colnames(Adipose_Visceral)
-f=colnames(prostate)
-vector3=Reduce(intersect, list(a,b,c,d,e,f))
+e=colnames(Brain_Hypothalamus)
+f=colnames(Artery_Aorta)
+g=colnames(Heart_Atrial)
+h=colnames(Skin_Sun_Exposed)
+vector3=Reduce(intersect, list(a,b,c,d,e,f,g,h))
 write.csv(vector3,"vector3.csv")
 
 
