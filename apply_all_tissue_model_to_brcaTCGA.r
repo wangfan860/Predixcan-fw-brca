@@ -196,25 +196,37 @@ rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
 Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
 write.csv(Brain_Hippocampus_Table,"breastPatient_Brain_Cerebellar_Hemisphere-model.csv")
 
-Brain_Hippocampus_model_all=read.table("Brain_Cerebellar_Hemisphere-predicted_expression.txt",header=T)    ####mm
+Brain_Hippocampus_model_all=read.table("Colon_Transverse-predicted_expression.txt",header=T)    ####mm
 rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
 Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
-write.csv(Brain_Hippocampus_Table,"breastPatient_Brain_Cerebellar_Hemisphere-model.csv")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Colon_Transverse-model.csv")
 
-Brain_Hippocampus_model_all=read.table("Brain_Cerebellar_Hemisphere-predicted_expression.txt",header=T)    ####nn
+Brain_Hippocampus_model_all=read.table("Pancreas-predicted_expression.txt",header=T)    ####nn
 rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
 Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
-write.csv(Brain_Hippocampus_Table,"breastPatient_Brain_Cerebellar_Hemisphere-model.csv")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Pancreas-model.csv")
 
-Brain_Hippocampus_model_all=read.table("Brain_Cerebellar_Hemisphere-predicted_expression.txt",header=T)    ####oo
+Brain_Hippocampus_model_all=read.table("Uterus-predicted_expression.txt",header=T)    ####oo
 rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
 Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
-write.csv(Brain_Hippocampus_Table,"breastPatient_Brain_Cerebellar_Hemisphere-model.csv")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Uterus-model.csv")
 
-Brain_Hippocampus_model_all=read.table("Brain_Cerebellar_Hemisphere-predicted_expression.txt",header=T)    ####pp
+Brain_Hippocampus_model_all=read.table("Brain_Cerebellum-predicted_expression.txt",header=T)    ####pp
 rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
 Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
-write.csv(Brain_Hippocampus_Table,"breastPatient_Brain_Cerebellar_Hemisphere-model.csv")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Brain_Cerebellum-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Vagina-predicted_expression.txt",header=T)    ####qq
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Vagina-model.csv")
+
+Brain_Hippocampus_model_all=read.table("Whole_Blood-predicted_expression.txt",header=T)    ####rr
+rownames(Brain_Hippocampus_model_all)=Brain_Hippocampus_model_all[,2]
+Brain_Hippocampus_Table=merge(brca_patient, Brain_Hippocampus_model_all, by="row.names")
+write.csv(Brain_Hippocampus_Table,"breastPatient_Whole_Blood-model.csv")
+
+
 
 breast=read.csv("breastPatient_brest model.csv",header=T)  ##a
 lung=read.csv("breastPatient_lung model.csv", header=T)    ##b
@@ -307,23 +319,23 @@ Ovary=read.csv("breastPatient_Ovary-model.csv", header=T) ##ii
 Colon=read.csv("breastPatient_Colon_Sigmoid-model.csv", header=T) ##jj
 Thyroid=read.csv("breastPatient_Thyroid-model.csv", header=T) ##kk
 Brain_Cerebellar=read.csv("breastPatient_Brain_Cerebellar_Hemisphere-model.csv", header=T) ##ll
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##mm
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##nn
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##oo
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##pp
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##qq
-Artery_Tibial=read.csv("breastPatient_Artery_Tibial-model.csv", header=T) ##rr
+Colon_Transverse=read.csv("breastPatient_Colon_Transverse-model.csv", header=T) ##mm
+Pancreas=read.csv("breastPatient_Pancreas-model.csv", header=T) ##nn
+Uterus=read.csv("breastPatient_Uterus-model.csv", header=T) ##oo
+Brain_Cerebellum=read.csv("breastPatient_Brain_Cerebellum-model.csv", header=T) ##pp
+Vagina=read.csv("breastPatient_Vagina-model.csv", header=T) ##qq
+Whole_Blood=read.csv("breastPatient_Whole_Blood-model.csv", header=T) ##rr
 a=colnames(Ovary)
 b=colnames(Colon)
 c=colnames(Thyroid)
 d=colnames(Brain_Cerebellar)
-e=colnames()
-f=colnames()
-g=colnames()
-h=colnames()
-i=colnames()
-j=colnames()
-vector6=Reduce(intersect, list(a,b,c,d,e,f,g,h))
+e=colnames(Colon_Transverse)
+f=colnames(Pancreas)
+g=colnames(Uterus)
+h=colnames(Brain_Cerebellum)
+i=colnames(Vagina)
+j=colnames(Whole_Blood)
+vector6=Reduce(intersect, list(a,b,c,d,e,f,g,h,i,j))
 write.csv(vector6,"vector6.csv")
 
 
@@ -335,16 +347,24 @@ vector5=read.csv("vector5.csv")
 vector6=read.csv("vector6.csv")
 
 vector=Reduce(intersect, list(vector1[,2],vector2[,2],vector3[,2],vector4[,2],vector5[,2],vector6[,2]))
+write.csv(vector, "genes shared by all tissue.csv")
 
-breast=read.csv("breastPatient_brest model.csv",header=T)  ##a
-breast_table=rbind(vector,subset(breast, select = vector))
+genename=read.table("gene name.txt", sep=',')
+rownames(genename)=genename[,2]
 
-lung=read.csv("breastPatient_lung model.csv", header=T)    ##b
-lung_table=rbind(vector,subset(lung, select = vector))
+sharedgene=read.csv("genes shared by all tissue.csv")
+rownames(sharedgene)=sharedgene[,2]
 
-gastro=read.csv("breastPatient_Gastro model.csv", header=T)  ##c
-gastro_table=rbind(vector,subset(gastro, select = vector))
+TotalTable=merge(genename, sharedgene, by="row.names")
+write.csv(TotalTable,"79genewithID.csv")
 
-Adipose=read.csv("breastPatient_Adipose model.csv", header=T)  ##d
+geneID=read.csv("66gene_tomatch.csv", header=T,stringsAsFactors=FALSE)
+
+breast=read.csv("breastPatient_brest model.csv",header=T,stringsAsFactors=FALSE)  
+common_cols <- intersect(colnames(geneID), colnames(breast))
+totalTable=rbind(subset(geneID, select = common_cols), subset(breast, select = common_cols))
+write.csv(totalTable,"66gene-brest-model.csv")
+
+
 
 
